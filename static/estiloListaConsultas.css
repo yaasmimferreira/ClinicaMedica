@@ -1,0 +1,245 @@
+:root{
+  --cor-azulNav: rgba(57, 108, 205, 0.8196);
+  --cor-branca: #FFFFFF;
+  --cor-azulEscuroRodape: rgba(90, 132, 210, 1);
+  --cor-textRodape: rgba(255, 255, 255, 0.89);
+  --cor-azulClaroRodape: rgba(149, 181, 241, 1);
+  --cor-fundo: rgba(250, 243, 235, 1);
+  --cor-btnEntrar: rgba(57, 108, 205, 0.8196);
+  --cor-btnSair: rgba(176, 197, 255, 1) ;
+  --cor-cinzaClaro: #F4F4F4;
+  --cor-borda: #c6c7c87a;
+  --cor-azulCard: rgba(149, 181, 241, 0.43);
+  --cor-fundoCad: rgba(149, 181, 241, 1);
+  --cor-botaoCad: rgba(90, 132, 210, 1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/* --- Nav --- */
+.Nav{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--cor-azulNav);
+  justify-content: center;
+  text-align: center;
+}
+
+.Logo{
+  width: 161px;
+  margin-right: auto;
+}
+
+.TextNav{
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--cor-branca);
+}
+
+.IconNav{
+  display: flex;
+  flex-direction: row;
+}
+
+.IconsNav{
+  width: 110px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  text-decoration: none !important;
+}
+
+.btnSair{
+    background-color: var(--cor-btnSair);
+    color: var(--cor-branca);
+    font-size: 18px;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    width: 89px;
+    height: 36px;
+  cursor: pointer;
+}
+
+
+/*CARD*/
+
+.page-header {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    font-family: "Concert One", sans-serif;
+    font-size: 40px;
+    color: #000;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.medico-card {
+    display: inline-block;
+    background-color: white;
+    width: 271px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.medico-card img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 55%;
+    height: auto;
+}
+
+.medico-card h2 {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.medico-card p {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 6px;
+    width: 250px;
+    margin-top: -7px;
+}
+
+.medico-card strong {
+    color: #000;
+}
+
+.actions {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn.blue {
+    background-color: var(--cor-azulNav);
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn.red {
+    width: 130%
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 3px;
+}
+
+.botoes img{
+    width: 36px;
+    margin: 5px;
+}
+
+.paginacao {
+    margin: 20px 0;
+}
+
+.paginacao a {
+    color: #29b6f6;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.paginacao a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* --- Rodapé --- */
+.RodInformacoes{
+    display: flex;
+    background-color: var(--cor-azulEscuroRodape);
+    justify-content: center;
+    align-items: center;
+}
+
+.TextoRodape{
+    color: var(--cor-textRodape);
+    padding: 20px 63px;
+}
+
+.tituloRod {
+    font-family: "Concert One", sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.textRod {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 216px;
+}
+
+.textRodDois {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 306px;
+}
+
+.RodRedes{
+    background-color: var(--cor-azulClaroRodape);
+}
+
+.Redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 78px;
+}
+
+.imgRod {
+    width: 45px;
+    padding: 9px;
+    margin: 11px 5px;
+}

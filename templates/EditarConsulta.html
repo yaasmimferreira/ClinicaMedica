@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="icon" type="image/png" href="/static/img/LogoNav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/estiloEditarCons.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="Nav">
+        <img class="Logo" src="/static/img/LogoNav.png">
+        <div class="IconNav">
+            <div>
+                <a href="/" class="IconsNav">
+                    <span class="TextNav">Home</span>
+                </a>
+            </div>
+            <div>
+                <a href="/" class="IconsNav">
+                    <span class="TextNav">Cadastros</span>
+                </a>
+            </div>
+            <div>
+                <a href="/" class="IconsNav">
+                    <span class="TextNav">Galeria</span>
+                </a>
+            </div>
+            <div>
+                <a href="/gestao" class="IconsNav">
+                    <span class="TextNav">Acessar</span>
+                </a>
+            </div>
+            <div>
+                <a href="/login" class="IconsNav">
+                    <button class="btnSair">Sair</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<section class="Login">
+    <div class="LoginUm">
+        <form action="/alterarConsulta/{{pagina}}" method="post">
+            <div class="T&L">
+                <h4 class="TituloS">Editar consulta</h4>
+            </div>
+            <div class="Linha"></div>
+            <fieldset class="Formulario">
+                <!-- Campo ID da consulta -->
+                <input type="hidden" id="idcon" name="idcon" value="{{ Consulta[0] }}" required>
+
+                <!-- Campo Nome do Paciente -->
+                <div class="Informacoes">
+                    <label for="nomePac" class="LabelF3">Nome do Paciente</label>
+                    <select id="nomePac" name="nomePac" class="InputF1" required>
+
+                              {% for pac in pacientes %}
+                                {% if Consulta[3] == pac[0] %}
+                                    <option value="{{ pac[0] }}" hidden selected>{{ pac[1] }}</option>
+                                {% endif %}
+                                  <option value={{ pac[0] }}> {{ pac[1] }} </option>
+                              {% endfor %}
+                     </select>
+                </div>
+
+                <!-- Campo Nome do Médico -->
+                <div class="Informacoes">
+                    <label for="nomeMed" class="LabelF1">Nome do Médico</label>
+                    <select id="nomeMed" name="nomeMed" class="InputF1" required>
+
+                              {% for med in medicos %}
+                                {% if Consulta[3] == med[0] %}
+                                    <option value="{{ med[0] }}" hidden selected>{{ med[1] }}</option>
+                                {% endif %}
+                                  <option value={{ med[0] }}> {{ med[1] }} </option>
+                              {% endfor %}
+                     </select>
+                </div>
+
+                <!-- Campo Horário -->
+                <div class="Informacoes">
+                    <label for="hora" class="LabelF2">Horário</label>
+                    <input type="time" id="hora" name="hora" class="InputF1" value="{{ Consulta[1] }}" required>
+                </div>
+
+                <!-- Campo Data da Consulta -->
+                <div class="Informacoes">
+                    <label for="dataCons" class="LabelF2">Data</label>
+                    <input type="date" id="dataCons" name="dataCons" class="InputF1" value="{{ Consulta[2] }}" required>
+                </div>
+
+                <!-- Botão Atualizar -->
+                <button class="btnEntrar" type="submit">Atualizar</button>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+<footer class="Rodape">
+    <div class="RodInformacoes">
+        <div class="TextoRodape">
+            <h3 class="tituloRod">Atendimento</h3>
+            <p class="textRod">Segunda a sexta, das 8h as 17h e Sábado das 8h ao 12h</p>
+        </div>
+        <div class="TextoRodape">
+            <h3 class="tituloRod">Contato</h3>
+            <p class="textRod">(18) 99196-8778</p>
+            <p class="textRod">(18) 3652-0509</p>
+        </div>
+        <div class="TextoRodape">
+            <h3 class="tituloRod">Endereço</h3>
+            <p class="textRodDois">Av. Eduardo de Castilho, 1016 - Centro, Penápolis - SP, 16300-021</p>
+        </div>
+    </div>
+    <div class="RodRedes">
+        <div class="Redes">
+            <a href="https://www.facebook.com/?locale=pt_BR">
+                <div><img class="imgRod" src="../static/img/ImgRodape/IconFace.png"/></div>
+            </a>
+            <a href="https://www.instagram.com/">
+                <div><img class="imgRod" src="../static/img/ImgRodape/IconInstagram.png"></div>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="icon" type="image/png" href="/static/img/LogoNav.png">
+
+    {#Links Arquivo#}
+    <link rel="stylesheet" href="../static/estiloHome.css">
+    <script src="../static/carrosel.js"></script>
+
+    {#Links Google#}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+{# Nav #}
+    <nav class="Nav">
+        <img class="Logo" src="../static/img/LogoNav.png">
+        <div class="IconNav">
+            <div>
+                <a href="" class="IconsNav">
+                    <span class="TextNav">Home</span>
+                </a>
+            </div>
+            <div>
+                <a href="#Cadastros" class="IconsNav">
+                    <span class="TextNav">Cadastros</span>
+                </a>
+            </div>
+            <div>
+                <a href="#Galeria" class="IconsNav">
+                    <span class="TextNav">Galeria</span>
+                </a>
+            </div>
+            <div>
+                <a href="/gestao" class="IconsNav">
+                    <span class="TextNav">Acessar</span>
+                </a>
+            </div>
+            <div>
+                <a href="/login" class="IconsNav">
+                    <button class="btnSair">Sair</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+{# Banner #}
+    <div class="Banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> <a href="/cadastroConsulta"><img src="../static/img/CarrosselBanner/Banner1.png"></a></div>
+                <div class="swiper-slide"> <a href="/"><img src="../static/img/CarrosselBanner/Banner2.png"></a></div>
+                <div class="swiper-slide"> <a href="#Galeria"><img src="../static/img/CarrosselBanner/Banner3.png"></a></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+{#Sobre nós#}
+    <section>
+        <div class="SobreNos">
+            <div class="Sobre">
+                <div class="Info">
+                    <h4 class="TitleS">SOBRE NÓS</h4>
+                    <p class="Text">
+                    Nosso consultório médico é um espaço acolhedor dedicado ao bem-estar e à saúde integral de seus pacientes, onde é possível escapar das preocupações do dia a dia e cuidar de si com atenção e qualidade. Fundado em 2022, o consultório hoje oferece uma ampla gama de serviços médicos especializados, com foco em atendimento humanizado e personalizado. Nosso corpo clínico é formado por profissionais altamente capacitados, que se dedicam ao cuidado integral do paciente.
+                    </p>
+                </div>
+                <div class="Imagem">
+                    <img class="Imagem" src="../static/img/ImgHome/Sobre.png"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{#Cadastros#}
+    <section id="Cadastros">
+        <div class="Cad">
+            <h4 class="TitleC">CADASTROS</h4>
+            <div class="Linha"></div>
+            <div class="Cards">
+                <div class="CadMedico">
+                    <p class="TituloCard">Médicos</p>
+                    <div class="ImagensCad"><img class="imgMed" src="../static/img/ImgHome/Medico.png"></div>
+
+                    <a href="/cadastroMedico">
+                        <div class="Btn">
+                            <button class="btnCadastrar">Cadastrar</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="CadPaciente">
+                    <p class="TituloCard">Pacientes</p>
+                    <div class="ImagensCad"><img class="imgPac" src="../static/img/ImgHome/Pacientes.png"></div>
+                    <a href="/cadastroPaciente">
+                        <div class="Btn">
+                            <button class="btnCadastrar">Cadastrar</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="CadConsultas">
+                    <p class="TituloCard">Consultas</p>
+                    <div class="ImagensCad"><img class="imgConsul" src="../static/img/ImgHome/Consultas.png"></div>
+                    <a href="/consulta" >
+                        <div class="Btn">
+                            <button class="btnCadastrar">Cadastrar</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{#Galeria#}
+ <section id="Galeria" class="Galeria">
+        <h4 class="TitleG">GALERIA</h4>
+        <div class="Galeria">
+            <div class="gUm">
+                <div><img class="ImagensGaleria" src="../static/img/ImgHome/recepção.png"></div>
+                <div><img class="ImagensGaleria" src="../static/img/ImgHome/consultório1.png"></div>
+                <div><img class="ImagensGaleria" src="../static/img/ImgHome/consultorio2.png"></div>
+            </div>
+            <div class="gDois">
+                <div><img class="ImagensGaleria" src="../static/img/ImgHome/consultorio3.png"></div>
+                <div><img class="ImagensGaleria" src="../static/img/ImgHome/consultorio4.png"></div>
+                <div><img class="ImagensGaleria" src="../static/img/ImgHome/consultorio5.png"></div>
+            </div>
+        </div>
+    </section>
+
+
+{#Conhecimento#}
+ <section class="Conhecimento">
+        <h4 class="TituloS">CONHECIMENTO PARA TRANSFORMAR</h4>
+
+     <div class="ObjConhecimento">
+            <div class="infoConhecimentoUm">
+                <div><img class="imgV" src="../static/img/ImgHome/Seguranca.png"></div>
+                <div>
+                    <h5 class="TituloV">Segurança</h5>
+                    <p class="TextoV">Além de possuir criptografia de ponta e segurança de nível bancário,
+                        fazemos backups diários do sistema para que nada se perca.</p>
+                </div>
+            </div>
+
+            <div class="infoConhecimento">
+                <div><img class="imgV" src="../static/img/ImgHome/IconSustentabilidade.png"></div>
+                <div>
+                    <h5 class="TituloV">Fácil de usar</h5>
+                    <p class="TextoV">Recebemos elogios sobre a usabilidade do QualityCare todos os dias,
+                        sempre buscando o tornar cada vez mais intuitivo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ {# Rodapé #}
+    <footer class="Rodape">
+        <div class="RodInformacoes">
+
+            <div class="TextoRodape">
+                <h3 class="tituloRod">Atendimento</h3>
+                <p class="textRod">Segunda a sexta, das 8h as 17h e Sábado das 8h ao 12h</p>
+            </div>
+
+            <div class="TextoRodape">
+                <h3 class="tituloRod">Contato</h3>
+                <p class="textRod">(18) 99196-8778</p>
+                <p class="textRod">(18) 3652-0509</p>
+            </div>
+
+            <div class="TextoRodape">
+                <h3 class="tituloRod">Endereço</h3>
+                <p class="textRodDois">Av. Eduardo de Castilho, 1016 - Centro, Penápolis - SP, 16300-021</p>
+            </div>
+        </div>
+
+        <div class="RodRedes">
+            <div class="Redes">
+                <a href="https://www.facebook.com/?locale=pt_BR">
+                    <div><img class="imgRod" src="../static/img/ImgRodape/IconFace.png"></div>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <div><img class="imgRod" src="../static/img/ImgRodape/IconInstagram.png"></div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

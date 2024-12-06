@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/static/img/LogoNav.png">
+    <title>{{ Titulo }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/estiloGestao.css">
+</head>
+<body>
+{# Nav #}
+    <nav class="Nav">
+        <img class="Logo" src="../static/img/LogoNav.png">
+        <div class="IconNav">
+            <div>
+                <a href="/" class="IconsNav">
+                    <span class="TextNav">Home</span>
+                </a>
+            </div>
+            <div>
+                <a href="/" class="IconsNav">
+                    <span class="TextNav">Cadastros</span>
+                </a>
+            </div>
+            <div>
+                <a href="/" class="IconsNav">
+                    <span class="TextNav">Galeria</span>
+                </a>
+            </div>
+            <div>
+                <a href="/gestao" class="IconsNav">
+                    <span class="TextNav">Acessar</span>
+                </a>
+            </div>
+            <div>
+                <a href="/login" class="IconsNav">
+                    <button class="btnSair">Sair</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+{# Info #}
+    <section class="Gestao">
+        <div class="Informacoes">
+            <h4 class="TituloG">Gestão QUALITYCARE</h4>
+            <div class="Linha"></div>
+
+            <a href="/listaMedicos/1" class="esconderLink">
+                <div class="Cards">
+                    <button class="ImagensM">
+                        <img src="../static/img/ImgGestao/Medicos.png">
+                    </button>
+                    <p class="textCard">Médicos Cadastrados</p>
+                </div>
+            </a>
+
+            <a href="/listaConsultas/1" class="esconderLink">
+                <div class="Cards">
+                    <button class="ImagensC">
+                        <img src="../static/img/ImgGestao/Consulta.png">
+                    </button>
+                    <p class="textCard">Consultas</p>
+                </div>
+            </a>
+
+            <a href="/exibirPaciente" class="esconderLink">
+                <div class="Cards">
+                    <button class="ImagensP">
+                        <img src="../static/img/ImgGestao/Pacientes.png">
+                    </button>
+                    <p class="textCard">Pacientes Cadastrados</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+{# Rodapé #}
+    <footer class="Rodape">
+        <div class="RodInformacoes">
+
+            <div class="TextoRodape">
+                <h3 class="tituloRod">Atendimento</h3>
+                <p class="textRod">Segunda a sexta, das 8h as 17h e Sábado das 8h ao 12h</p>
+            </div>
+
+            <div class="TextoRodape">
+                <h3 class="tituloRod">Contato</h3>
+                <p class="textRod">(18) 99196-8778</p>
+                <p class="textRod">(18) 3652-0509</p>
+            </div>
+
+            <div class="TextoRodape">
+                <h3 class="tituloRod">Endereço</h3>
+                <p class="textRodDois">Av. Eduardo de Castilho, 1016 - Centro, Penápolis - SP, 16300-021</p>
+            </div>
+        </div>
+
+        <div class="RodRedes">
+            <div class="Redes">
+                <a href="https://www.facebook.com/?locale=pt_BR">
+                    <div><img class="imgRod" src="../static/img/ImgRodape/IconFace.png"></div>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <div><img class="imgRod" src="../static/img/ImgRodape/IconInstagram.png"></div>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
